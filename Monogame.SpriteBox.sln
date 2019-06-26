@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".meta", ".meta", "{500DB1AE-6768-4780-B0B4-4EDA1AA26FF9}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2B5841AB-67BD-433A-8CB8-D76EEF69CD3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineExtension", "PipelineExtension\PipelineExtension.csproj", "{0EDD9BBE-FD10-4F0B-8084-6B4FFFCC3466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpriteBox", "SpriteBox\SpriteBox.csproj", "{A93949E7-EF39-4B7C-9F19-56BEC63130D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EDD9BBE-FD10-4F0B-8084-6B4FFFCC3466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EDD9BBE-FD10-4F0B-8084-6B4FFFCC3466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EDD9BBE-FD10-4F0B-8084-6B4FFFCC3466}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0EDD9BBE-FD10-4F0B-8084-6B4FFFCC3466}.Debug|x86.Build.0 = Debug|Any CPU
+		{0EDD9BBE-FD10-4F0B-8084-6B4FFFCC3466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EDD9BBE-FD10-4F0B-8084-6B4FFFCC3466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EDD9BBE-FD10-4F0B-8084-6B4FFFCC3466}.Release|x86.ActiveCfg = Release|Any CPU
+		{0EDD9BBE-FD10-4F0B-8084-6B4FFFCC3466}.Release|x86.Build.0 = Release|Any CPU
+		{A93949E7-EF39-4B7C-9F19-56BEC63130D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A93949E7-EF39-4B7C-9F19-56BEC63130D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A93949E7-EF39-4B7C-9F19-56BEC63130D5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A93949E7-EF39-4B7C-9F19-56BEC63130D5}.Debug|x86.Build.0 = Debug|Any CPU
+		{A93949E7-EF39-4B7C-9F19-56BEC63130D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A93949E7-EF39-4B7C-9F19-56BEC63130D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A93949E7-EF39-4B7C-9F19-56BEC63130D5}.Release|x86.ActiveCfg = Release|Any CPU
+		{A93949E7-EF39-4B7C-9F19-56BEC63130D5}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0EDD9BBE-FD10-4F0B-8084-6B4FFFCC3466} = {2B5841AB-67BD-433A-8CB8-D76EEF69CD3C}
+		{A93949E7-EF39-4B7C-9F19-56BEC63130D5} = {2B5841AB-67BD-433A-8CB8-D76EEF69CD3C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {654AF5D5-0E13-413F-9B0E-BF1008E839AE}
+	EndGlobalSection
+EndGlobal
