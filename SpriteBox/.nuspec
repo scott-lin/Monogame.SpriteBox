@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <authors>Scott Lin</authors>
+    <description>Runtime components for reading and modeling Monogame Sprite Box assets.</description>
+    <title>Monogame.SpriteBox</title>
+    <licenseUrl>https://github.com/scott-lin/Monogame.SpriteBox/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/scott-lin/Monogame.SpriteBox</projectUrl>
+    <tags>Monogame Spritsheet TextureAtlas XNA</tags>
+  </metadata>
+</package>

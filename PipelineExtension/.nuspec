@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <authors>Scott Lin</authors>
+    <description>A Monogame content pipeline extension for combining many individual sprites into a single texture.</description>
+    <title>Monogame.SpriteBox.PipelineExtension</title>
+    <licenseUrl>https://github.com/scott-lin/Monogame.SpriteBox/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/scott-lin/Monogame.SpriteBox</projectUrl>
+    <tags>Monogame Spritsheet TextureAtlas XNA</tags>
+  </metadata>
+</package>
