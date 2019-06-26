@@ -21,9 +21,9 @@ namespace Monogame.SpriteBox.PipelineExtension.Processor
     [ContentProcessor( DisplayName = "Sprite Box Processor" )]
     public class SpriteBoxProcessor : ContentProcessor<SpriteSheetDeclaration, SpriteSheetContent>
     {
-        static readonly Color DefaultColorKeyColor = Color.FromArgb( 255, 0, 255, 255 );
+        static readonly Color DefaultColorKeyColor = Color.Transparent;
         const bool DefaultGenerateMipmaps = false;
-        const bool DefaultIsColorKeyEnabled = true;
+        const bool DefaultIsColorKeyEnabled = false;
         const bool DefaultIsPowerOfTwo = false;
         const bool DefaultIsSquare = false;
         const int DefaultPadding = 1;
@@ -33,7 +33,7 @@ namespace Monogame.SpriteBox.PipelineExtension.Processor
         /// <summary>
         /// Gets or sets the color value to replace with transparent black.
         /// </summary>
-        [DefaultValue( typeof( Color ), "255, 0, 255, 255" )]
+        [DefaultValue( typeof( Color ), "0, 0, 0, 0" )]
         [DisplayName( "Color Key Color" )]
         [Description( "If the texture is color-keyed, pixels of this color are replaced with transparent black." )]
         public Color ColorKeyColor { get; set; } = DefaultColorKeyColor;
@@ -41,7 +41,7 @@ namespace Monogame.SpriteBox.PipelineExtension.Processor
         /// <summary>
         /// Gets or sets a value indicating whether a full chain of mipmaps are generated from the source material. Existing mipmaps of the material are not replaced.
         /// </summary>
-        [DefaultValue( false )]
+        [DefaultValue( DefaultGenerateMipmaps )]
         [DisplayName( "Generate Mipmaps?" )]
         [Description( "If enabled, a full chain of mipmaps are generated from the source material. Existing mipmaps of the material are not replaced." )]
         public bool GenerateMipmaps { get; set; } = DefaultGenerateMipmaps;
@@ -49,7 +49,7 @@ namespace Monogame.SpriteBox.PipelineExtension.Processor
         /// <summary>
         /// Gets or sets a value indicating whether color keying of a texture is enabled.
         /// </summary>
-        [DefaultValue( true )]
+        [DefaultValue( DefaultIsColorKeyEnabled )]
         [DisplayName( "Color Key Enabled?" )]
         [Description( "If enabled, the source texture is color-keyed. Pixels matching the value of \"Color Key Color\" are replaced with transparent black." )]
         public bool IsColorKeyEnabled { get; set; } = DefaultIsColorKeyEnabled;
@@ -81,7 +81,7 @@ namespace Monogame.SpriteBox.PipelineExtension.Processor
         /// <summary>
         /// Gets or sets a value indicating whether alpha premultiply of textures is enabled.
         /// </summary>
-        [DefaultValue( true )]
+        [DefaultValue( DefaultPremultiplyTextureAlpha )]
         [DisplayName( "Premultiply Alpha?" )]
         [Description( "If enabled, the texture is converted to premultiplied alpha format." )]
         public bool PremultiplyTextureAlpha { get; set; } = DefaultPremultiplyTextureAlpha;

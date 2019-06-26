@@ -43,41 +43,7 @@ namespace Monogame.SpriteBox
 
             spriteSheet.Texture = reader.ReadExternalReference<Texture2D>();
 
-            //// Use custom read texture implementation to avoid automatic XNB deserialization. Reflection is used to find the deserializer,
-            //// which creates an unwanted performance overhead and heap garbage to clean. This is undesirable on lower spec devices.
-            ////
-            //spriteSheet.Texture = this.ReadTexture( reader, spriteSheet );
-
             return spriteSheet;
-        }
-
-        Texture2D ReadTexture( ContentReader reader, SpriteSheet spriteSheet )
-        {
-            var format = (SurfaceFormat)reader.ReadInt32();
-            int width = reader.ReadInt32();
-            int height = reader.ReadInt32();
-            int levelCount = reader.ReadInt32();
-
-            var graphicsDeviceManager = (GraphicsDeviceManager)reader.ContentManager.ServiceProvider.GetService( typeof( IGraphicsDeviceManager ) );
-            var texture = new Texture2D( graphicsDeviceManager.GraphicsDevice, width, height, mipmap: levelCount > 1, format: format );
-
-            for ( int level = 0; level < levelCount; level++ )
-            {
-                int levelPixelDataLength = reader.ReadInt32();
-                byte[] levelPixelData = reader.ReadBytes( levelPixelDataLength );
-
-                int levelWidth = Math.Max( width >> level, 1 );
-                int levelHeight = Math.Max( height >> level, 1 );
-
-                texture.SetData(
-                    level,
-                    rect: null,
-                    data: levelPixelData,
-                    startIndex: 0,
-                    elementCount: levelPixelData.Length );
-            }
-
-            return texture;
         }
     }
 }
