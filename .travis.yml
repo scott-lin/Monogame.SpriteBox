@@ -3,8 +3,9 @@ solution: Monogame.SpriteBox.sln
 install:
   - nuget restore Monogame.SpriteBox.sln
 script:
-  - nuget pack ./PipelineExtension/.nuspec
-  - nuget pack ./SpriteBox/.nuspec
+  - xbuild /p:Configuration=Release Monogame.SpriteBox.sln
+  - nuget pack ./PipelineExtension
+  - nuget pack ./SpriteBox
   - nuget setApiKey $NUGET_API_KEY -Source $NUGET_SOURCE -Verbosity quiet
   - nuget push ./PipelineExtension/*.nupkg -Source $NUGET_SOURCE
   - nuget push ./SpriteBox/*.nupkg -Source $NUGET_SOURCE
