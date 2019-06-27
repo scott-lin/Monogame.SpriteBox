@@ -16,14 +16,19 @@ namespace Monogame.SpriteBox
         public string Name;
 
         /// <summary>
-        /// Mapping of sprite's name to its index in <see cref="SpriteRectangles"/>.
+        /// Gets the mapping of sprite's name to its index in <see cref="SpriteRectangles"/>.
         /// </summary>
         public IDictionary<string, int> SpriteNamesToIndexMapping { get; } = new Dictionary<string, int>();
 
         /// <summary>
-        /// Locations in the texture where each sprite has been placed.
+        /// Gets the locations in the texture where each sprite has been placed.
         /// </summary>
         public IList<Rectangle> SpriteRectangles { get; } = new List<Rectangle>();
+
+        /// <summary>
+        /// Gets the mapping of sprite's name to <see cref="Sprite"/> object, which is contained in this sprite sheet.
+        /// </summary>
+        public IDictionary<string, Sprite> Sprites { get; } = new Dictionary<string, Sprite>();
 
         /// <summary>
         /// Gets the texture used by this sprite sheet which contains many separate sprite images.

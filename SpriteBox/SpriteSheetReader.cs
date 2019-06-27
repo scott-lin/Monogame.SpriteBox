@@ -39,6 +39,8 @@ namespace Monogame.SpriteBox
 
                 spriteSheet.SpriteNamesToIndexMapping.Add( spriteName, spriteIndex );
                 spriteSheet.SpriteRectangles.Add( new Rectangle( x, y, width, height ) );
+
+                spriteSheet.Sprites.Add( spriteName, new Sprite( spriteName, spriteSheet ) );
             }
 
             spriteSheet.Texture = reader.ReadExternalReference<Texture2D>();
