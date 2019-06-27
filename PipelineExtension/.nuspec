@@ -10,4 +10,8 @@
     <projectUrl>https://github.com/scott-lin/Monogame.SpriteBox</projectUrl>
     <tags>Monogame Spritsheet TextureAtlas XNA</tags>
   </metadata>
+  <files>
+    <file src="bin\$configuration$\*.dll" target="lib\net461" />
+    <file src="bin\$configuration$\*.pdb" target="lib\net461" />
+  </files>
 </package>

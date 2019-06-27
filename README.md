@@ -8,7 +8,7 @@ A Monogame content pipeline extension for combining many individual sprites into
 
 ## Setup
 
-Add a reference to the SpriteBox pipeline extension using the Monogame Pipeline Tool.
+Add a reference to the SpriteBox pipeline extension assembly using the Monogame Pipeline Tool. Get the assembly with:
 
     nuget install Monogame.SpriteBox.PipelineExtension
 
@@ -20,7 +20,7 @@ Add the SpriteBox runtime to your game project to enable loading of content prod
 
 ### Pipeline Extension
 
-1. Add Monogame.SpriteBox.PipelineExtension.dll to your MGCB using the Monogame Pipeline Tool.
+1. Add `Monogame.SpriteBox.PipelineExtension.dll` to your MGCB using the Monogame Pipeline Tool.
 
 2. Create an new file with `.box` extension. Populate it with a name and path information hinting at which sprites you'd like to pack. Note, the path hints support [Glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) for convenience.
 
@@ -28,14 +28,14 @@ Add the SpriteBox runtime to your game project to enable loading of content prod
 
         {
             "Name" : string,
-            "TexturePathPatterns" : [ string ]
+            "PathPatterns" : [ string ]
         }
     
     Example
 
         {
             "Name": "Environment",
-            "TexturePathPatterns":
+            "PathPatterns":
                 [
                     "Backgrounds/BG1.png",
                     "Dungeons/Floors/**/*",
@@ -46,14 +46,20 @@ Add the SpriteBox runtime to your game project to enable loading of content prod
 
 3. Add the `.box` file to your MGCB the same way other assets are. Optionally, set the processor parameters documented in the [code](https://github.com/scott-lin/Monogame.SpriteBox/blob/master/PipelineExtension/Processor/SpriteBoxProcessor.cs).
 
-4. Build
+4. Build to produce:
+
+    a. The serialized SpriteBox `.xnb` with filename matching your original `.box` file. **Load this file at runtime.**
+    
+    b. The serialized, packed texture with filename matching `<name>Texture.xnb`
+    
+    c. A `<name>.png` representing the same packed texture, but in a format you may preview.
 
 ### Runtime
 
-1. Load a sprite sheet using `ContentManager`:
+1. Load a sprite sheet using `ContentManager`. **Use the `.box` filename here.**
 
        SpriteSheet mySpriteSheet = Content.Load<SpriteSheet>( "myAssetName" );
 
-2. Draw sprites using the `SpriteBatchExtensions` method:
+2. Draw sprites using the `SpriteBatchExtensions` method. *The center of the sprite will be drawn at the position specified.*
 
        spriteBatch.Draw( mySpiteSheet.Sprites["someSpriteName"], position: new Vector2(50f, 120f) );

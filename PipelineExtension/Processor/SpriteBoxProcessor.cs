@@ -138,7 +138,7 @@ namespace Monogame.SpriteBox.PipelineExtension.Processor
             //
             var texturePaths = new HashSet<string>();
 
-            foreach ( string pathPattern in declaration.TexturePathPatterns )
+            foreach ( string pathPattern in declaration.PathPatterns )
             {
                 foreach ( string filePath in Glob.Files( Directory.GetCurrentDirectory(), pathPattern ) )
                 {

@@ -8,13 +8,13 @@ namespace Monogame.SpriteBox.PipelineExtension.Importer
     public class SpriteSheetDeclaration
     {
         /// <summary>
-        /// Gets or sets the name of the sprite sheet.
+        /// Gets or sets the name of the sprite sheet texture.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
         /// Gets a list of path glob patterns, which resolve to local disk files containing textures to pack into the sprite sheet.
         /// </summary>
-        public IList<string> TexturePathPatterns { get; } = new List<string>();
+        public IList<string> PathPatterns { get; } = new List<string>();
     }
 }
