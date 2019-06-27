@@ -60,6 +60,6 @@ Add the SpriteBox runtime to your game project to enable loading of content prod
 
        SpriteSheet mySpriteSheet = Content.Load<SpriteSheet>( "myAssetName" );
 
-2. Draw sprites using the `SpriteBatchExtensions` method. *The center of the sprite will be drawn at the position specified.*
+2. Draw sprites using the `SpriteBatchExtensions` method. The *center* of the sprite will be drawn at the position specified.
 
        spriteBatch.Draw( mySpiteSheet.Sprites["someSpriteName"], position: new Vector2(50f, 120f) );
