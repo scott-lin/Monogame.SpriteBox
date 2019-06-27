@@ -55,7 +55,7 @@ namespace Monogame.SpriteBox.PipelineExtension.Writer
         /// <returns>Runtime type as string.</returns>
         public override string GetRuntimeType( TargetPlatform targetPlatform )
         {
-            return typeof( SpriteSheet ).AssemblyQualifiedName;
+            return "Monogame.SpriteBox.SpriteSheet";
         }
 
         /// <summary>
