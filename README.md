@@ -20,7 +20,7 @@ Add the SpriteBox runtime to your game project to enable loading of content prod
 
 ### Pipeline Extension
 
-1. Add Monogame.SpriteBox.PipelineExtension.dll to your MGCB using the Monogame Pipeline Tool.
+1. Add `Monogame.SpriteBox.PipelineExtension.dll` to your MGCB using the Monogame Pipeline Tool.
 
 2. Create an new file with `.box` extension. Populate it with a name and path information hinting at which sprites you'd like to pack. Note, the path hints support [Glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) for convenience.
 
