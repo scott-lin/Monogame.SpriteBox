@@ -50,7 +50,7 @@ namespace Monogame.SpriteBox
             this.SourceRectangle = spriteSheet.GetSourceRectangle( name );
             this.Width = this.SourceRectangle.Width;
             this.Height = this.SourceRectangle.Height;
-            this.Origin = new Vector2( this.Width / 2, this.Height / 2 );
+            this.Origin = new Vector2( (float)this.Width / 2.0f, (float)this.Height / 2.0f );
         }
     }
 }
